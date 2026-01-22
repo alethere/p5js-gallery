@@ -3,6 +3,7 @@
 const PROJECTS = [
   { id: 'bouncing-balls', title: 'Bouncing Balls', path: 'projects/bouncing-balls/index.html' },
   { id: 'psychodelic-tunnel', title: 'Psychodelic Tunnel', path: 'projects/psychodelic-tunnel/index.html' },
+  { id: 'grid-trip', title: 'Grid Trip', path: 'projects/grid-trip/index.html' },
 ];
 
 const q = (sel, el=document) => el.querySelector(sel);
