@@ -1,7 +1,7 @@
 var xmov = 0;
 var ymov = 0;
 let cols = [];
-var rate = 0.01;
+var rate = 0.04;
 
 function setup() {
   const c = createCanvas(windowWidth, windowHeight);
