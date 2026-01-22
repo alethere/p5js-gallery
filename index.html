@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>p5.js Sketch Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>p5.js Sketch Gallery</h1>
+    <p class="subtitle">Select a project from the strip below to load it in the viewer.</p>
+  </header>
+
+  <main class="layout">
+    <section class="viewer" aria-label="Sketch viewer">
+      <div class="viewer-frame">
+        <iframe id="sketchFrame" title="Selected sketch" loading="eager" allow="fullscreen"></iframe>
+      </div>
+    </section>
+
+    <nav class="project-strip" aria-label="Project selector">
+      <button class="nav-btn left" aria-label="Scroll left" title="Scroll left" id="scrollLeft">◀</button>
+      <ul id="projectList" class="project-list" role="list"></ul>
+      <button class="nav-btn right" aria-label="Scroll right" title="Scroll right" id="scrollRight">▶</button>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with <a href="https://p5js.org/" target="_blank" rel="noreferrer noopener">p5.js</a>. Use ←/→ to navigate projects.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
