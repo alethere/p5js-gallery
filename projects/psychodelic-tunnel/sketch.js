@@ -12,14 +12,14 @@ function setup() {
 }
 
 function draw() {
-    background(220);
+    background(0);
 
     // No stroke for shapes
     noStroke();
     let x = mouseX;
     x = map(x, 0, width, 0, 255);
     
-    if(random(1) < 0.9){
+    if(random(1) < 0.5){
 
        circles.push(createVector(mouseX,mouseY,1));
 

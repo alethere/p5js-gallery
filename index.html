@@ -9,11 +9,14 @@
 <body>
   <header class="site-header">
     <h1>p5.js Sketch Gallery</h1>
-    <p class="subtitle">Select a project from the strip below to load it in the viewer.</p>
+    <p class="subtitle">Select a project from the list below to load it in the viewer.</p>
   </header>
 
   <main class="layout">
     <section class="viewer" aria-label="Sketch viewer">
+      <div class="description-panel">
+        <p id="projectDescription" class="project-description"></p>
+      </div>
       <div class="viewer-frame">
         <iframe id="sketchFrame" title="Selected sketch" loading="eager" allow="fullscreen"></iframe>
       </div>

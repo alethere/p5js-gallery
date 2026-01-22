@@ -30,10 +30,10 @@ body {
 }
 
 .subtitle { 
-  margin: 0rem 0 0;
-  color: var(--muted);
+  margin: 0.2rem 0 0;
+  color: var(--accent);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .layout {
@@ -50,7 +50,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   flex-shrink: 0;
+  position: relative;
 }
 
 .viewer-frame {
@@ -69,6 +71,44 @@ body {
   height: 100%;
   border: none;
   background: #000;
+}
+
+.description-panel {
+  width: 200px;
+  height: min(80vh, 80vw);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 160;
+  text-align: right;
+  max-width: 100%;
+  word-wrap: break-word;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.project-description.fade-in-left {
+  animation: fadeInFromRight 1.8s ease-out forwards;
+}
+
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .project-strip {
@@ -184,6 +224,23 @@ body {
     width: 100%;
     height: auto;
     max-height: 300px;
+  }
+  
+  .viewer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .description-panel {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .project-description {
+    text-align: center;
   }
   
   .viewer-frame {

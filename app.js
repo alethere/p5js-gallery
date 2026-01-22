@@ -1,9 +1,12 @@
 
 // --- Configuration: list your projects here ---
 const PROJECTS = [
-  { id: 'bouncing-balls', title: 'Bouncing Balls', path: 'projects/bouncing-balls/index.html' },
-  { id: 'psychodelic-tunnel', title: 'Psychodelic Tunnel', path: 'projects/psychodelic-tunnel/index.html' },
-  { id: 'grid-trip', title: 'Grid Trip', path: 'projects/grid-trip/index.html' },
+  { id: 'bouncing-balls', title: 'Bouncing Balls', path: 'projects/bouncing-balls/index.html', 
+    description: 'A simple physics simulation of bouncing balls.' },
+  { id: 'psychodelic-tunnel', title: 'Psychodelic Tunnel', path: 'projects/psychodelic-tunnel/index.html', 
+    description: 'Drag your mouse around the screen to trigger a colorful tunnel [careful with the strobing effect!]' },
+  { id: 'grid-trip', title: 'Grid Trip', path: 'projects/grid-trip/index.html', 
+    description: 'Drag this infinite grid of squares around.\nDouble-click to reset the red squares.' },
 ];
 
 const q = (sel, el=document) => el.querySelector(sel);
@@ -21,6 +24,11 @@ function setProjectById(id) {
   const frame = q('#sketchFrame');
   frame.src = proj.path;
   qa('.project-button').forEach(btn => btn.setAttribute('aria-current', String(btn.dataset.id === proj.id)));
+  const descEl = q('#projectDescription');
+  descEl.textContent = proj.description;
+  descEl.classList.remove('fade-in-left');
+  void descEl.offsetWidth; // Trigger reflow to restart animation
+  descEl.classList.add('fade-in-left');
   const url = new URL(window.location.href);
   url.searchParams.set('project', proj.id);
   history.replaceState({}, '', url);
