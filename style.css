@@ -18,7 +18,7 @@ body {
 }
 
 .site-header { 
-  padding: 2rem 2rem;
+  padding: 1rem 2rem 0.5rem;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .subtitle { 
-  margin: 0.5rem 0 0;
+  margin: 0rem 0 0;
   color: var(--muted);
   font-size: 1rem;
   font-weight: 400;
@@ -42,7 +42,7 @@ body {
   justify-content: center;
   gap: 3rem;
   min-height: calc(100dvh - 200px);
-  padding: 2rem;
+  padding: 1rem;
   flex-wrap: wrap;
 }
 
@@ -54,8 +54,8 @@ body {
 }
 
 .viewer-frame {
-  width: min(70vh,70vw);
-  height: min(70vh,70vw);
+  width: min(80vh,80vw);
+  height: min(80vh,80vw);
   background: #000;
   border-radius: 32px;
   border: 2px solid #e0dcd3;
@@ -77,7 +77,7 @@ body {
   align-items: stretch;
   gap: 0;
   padding: 0;
-  height: min(70vh, 70vw);
+  height: min(80vh,80vw);
   flex-shrink: 0;
 }
 
@@ -147,7 +147,6 @@ body {
 }
 
 .project-button:hover { 
-  background: rgba(212, 165, 116, 0.1);
   color: var(--accent-hover);
 }
 
@@ -161,9 +160,8 @@ body {
 .site-footer { 
   color: var(--muted); 
   text-align: center; 
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 0.95rem;
-  border-top: 1px solid #e0dcd3;
 }
 
 .site-footer a { 
@@ -203,11 +201,11 @@ body {
 
 @media (max-width: 640px) {
   .site-header {
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem 0.5rem;
   }
   
   .layout {
-    padding: 1rem;
+    padding: 1rem 2rem;
     gap: 1rem;
   }
   
