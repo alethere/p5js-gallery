@@ -7,6 +7,9 @@ const PROJECTS = [
     description: 'Drag your mouse around the screen to trigger a colorful tunnel [careful with the strobing effect!]' },
   { id: 'grid-trip', title: 'Grid Trip', path: 'projects/grid-trip/index.html', 
     description: 'Drag this infinite grid of squares around.\nDouble-click to reset the red squares.' },
+  { id: 'light-bars', title: 'Light Bars', path: 'projects/light-bars/index.html',
+    description: 'I like to imagine this is what the slit experiment feels like for a photon. Click the button to change modes.'
+  },
 ];
 
 const q = (sel, el=document) => el.querySelector(sel);
